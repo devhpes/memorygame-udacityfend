@@ -121,6 +121,25 @@ function addMoves() {
     }
 }
 
+//Timer function
+let timerInterval; 
+function startTimer() {
+    timerInterval = setInterval(function() {
+        //Inner HTML of timer
+       timerCounter.innerHTML = minute + " Minute " + second + " Second";
+        second++;
+        if (second == 60) {
+            minute++;
+            second = 0;
+        }
+        if (minute == 60) {
+            hour++;
+            minute = 0;
+        }
+    }, 1000);
+
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
