@@ -5,3 +5,6 @@ Udacity FEND Memory Game Project
 HTML
 CSS
 JavaScript
+
+#Contribute
+Anybody Can Contribute
