@@ -45,6 +45,18 @@ let stars = document.querySelectorAll(".fa-star");
  *   - add each card's HTML to the page
  */
 
+//Game start function
+function init() {
+    cards = shuffle(cards);
+    for(let i = 0; i < cards.length; i++){
+        deck.innerHTML = '';
+        [].forEach.call(cards, function(element){
+            deck.appendChild(element);
+        });
+        cards[i].classList.remove("show", "open", "match", "disable");
+    }
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
