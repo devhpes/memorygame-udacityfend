@@ -10,4 +10,4 @@ JavaScript
 Anybody Can Contribute
 
 # How to play
-Download the repo and simply open index.html file.
+Download the repo and simply open index.html file or Play online https://devhpes.github.io/memorygame-udacityfend/
