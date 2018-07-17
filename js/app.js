@@ -53,7 +53,6 @@ function init() {
         [].forEach.call(cards, function(element){
             deck.appendChild(element);
         });
-        cards[i].classList.remove("show", "open", "match", "disable");
     }
     cards[i].classList.remove("show", "open", "match", "disable");
     reset();
