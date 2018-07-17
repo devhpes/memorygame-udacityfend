@@ -1,7 +1,34 @@
 /*
  * Create a list that holds all of your cards
  */
+//Declarations
 
+//array for open cards
+let openCard = [];
+
+//array for matched cards
+let matchedCards = [];
+
+// declaring move variable
+let moves = 0;
+
+// declaring stars rating variable and assign it to 3
+let starsRating = 3;
+
+// declaring time variables
+let minute = 0;
+let second = 0;
+let hour = 0;
+
+//Selecting container
+const container = document.querySelector('.container');
+
+//Selecting cards
+let card = document.getElementsByClassName('card');
+let cards = [...card];
+
+//Selecting deck
+const deck = document.querySelector('.deck');
 
 /*
  * Display the cards on the page
