@@ -57,9 +57,9 @@ function init() {
         [].forEach.call(cards, function(element){
             deck.appendChild(element);
         });
+        cards[i].classList.remove("show", "open", "match", "disable");
+        reset();
     }
-    cards[i].classList.remove("show", "open", "match", "disable");
-    reset();
 }
 
 //Calling the reset function,it reset everything when a new game is started - time, stars and moves
@@ -89,6 +89,8 @@ for (let i = 0; i < card.length; i++)
 
                 //reseting the openCard 
                 openCard = [];
+
+                isOverModal();
 
             } else {
                 //
