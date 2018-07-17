@@ -84,7 +84,7 @@ for (let i = 0; i < card.length; i++)
 
                 //reseting the openCard 
                 openCard = [];
-                
+
             } else {
                 //
                 openCard[0].classList.add('show',"unmatched",'disable');
@@ -106,6 +106,20 @@ for (let i = 0; i < card.length; i++)
         }
 
     });
+
+//Move function - for adding moves when user clicks on cards
+function addMoves() {
+    moves++;
+    movesCounter.innerHTML = moves;
+    rating();
+    //Starting timer when user makes its first click on the cards
+    if (moves == 1) {
+        second = 0;
+        minute = 0;
+        hour = 0;
+        startTimer();
+    }
+}
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
