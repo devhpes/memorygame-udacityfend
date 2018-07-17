@@ -97,7 +97,8 @@ for (let i = 0; i < card.length; i++)
                 }, 600);
 
             }
-            
+             //Adding moves based on cards match or dismatch
+             addMoves();
 
         } else {
             openCard[0].classList.add('open', 'show', 'disable');
