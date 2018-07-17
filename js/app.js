@@ -196,9 +196,9 @@ function reset() {
 
     //Reseting stars
     stars[1].classList.add("fa-star");
-	stars[1].classList.remove("fa-star-o");
-	stars[2].classList.add("fa-star");
-	stars[2].classList.remove("fa-star-o");
+    stars[1].classList.remove("fa-star-o");
+    stars[2].classList.add("fa-star");
+    stars[2].classList.remove("fa-star-o");
 
 }
 
