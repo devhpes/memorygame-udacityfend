@@ -121,3 +121,29 @@ h1 {
 .fa-star {
 	color: #FFD700;
 }
+
+/*
+ * Styles for the Congratulation modal
+ */
+
+ .congomodal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.450);
+}
+
+.modalBody {
+    position: relative;
+    padding: 1em;
+    width: 550px;
+    height: 330px;
+    top: 0%;
+    left: 50%;
+    background:#0291e4;
+    transform: translate(-50%, 70%);
+    text-align: center;
+    border-radius: 10px;
+}
