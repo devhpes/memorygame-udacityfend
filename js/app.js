@@ -55,6 +55,8 @@ function init() {
         });
         cards[i].classList.remove("show", "open", "match", "disable");
     }
+    cards[i].classList.remove("show", "open", "match", "disable");
+    reset();
 }
 
 //Calling the reset function,it reset everything when a new game is started - time, stars and moves
@@ -212,7 +214,7 @@ function shuffle(array) {
     return array;
 }
 
-
+init();
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
