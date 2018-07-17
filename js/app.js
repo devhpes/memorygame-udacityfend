@@ -176,6 +176,27 @@ function isOverModal() {
 
 }
 
+
+//Function for restarting the game
+function playAgain() {
+    modalToggle();
+    init();
+}
+
+//Reset function - All time, moves and rating will be reset to the their default values
+function reset() {
+    //Resetting timer
+    timerCounter.innerHTML = "0 Minute 0 Second";
+    clearInterval(timerInterval);
+
+    //Resetting moves
+    moves = 0;
+    movesCounter.innerHTML = moves;
+
+    //Resetting stars
+    starsRating = 3;
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
