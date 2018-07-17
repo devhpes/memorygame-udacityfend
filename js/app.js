@@ -38,6 +38,10 @@ const timerCounter = document.querySelector('.timer');
 
 //Selecting fontawesome star
 let stars = document.querySelectorAll(".fa-star");
+
+//Selecting congratulation modal div
+const congoModal = document.querySelector('.congomodal');
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
