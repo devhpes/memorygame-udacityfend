@@ -36,6 +36,8 @@ const movesCounter = document.querySelector('.moves');
 //Selecting timer
 const timerCounter = document.querySelector('.timer');
 
+//Selecting fontawesome star
+let stars = document.querySelectorAll(".fa-star");
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
