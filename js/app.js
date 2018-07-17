@@ -30,6 +30,12 @@ let cards = [...card];
 //Selecting deck
 const deck = document.querySelector('.deck');
 
+//Selecting moves span
+const movesCounter = document.querySelector('.moves');
+
+//Selecting timer
+const timerCounter = document.querySelector('.timer');
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
