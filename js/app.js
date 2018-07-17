@@ -140,6 +140,19 @@ function startTimer() {
 
 }
 
+//Rating function - Based on the moves, user will get rating specific rating or stars.
+function rating() {
+    if (moves > 14 && moves < 22) {
+       stars[2].classList.remove('fa-star');
+       stars[2].classList.add('fa-star-o');
+       starsRating = 2;
+   } else if (moves > 23) {
+       stars[1].classList.remove('fa-star');
+       stars[1].classList.add('fa-star-o');
+       starsRating = 1;
+   }
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
