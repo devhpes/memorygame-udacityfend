@@ -6,5 +6,8 @@ HTML
 CSS
 JavaScript
 
-#Contribute
+# Contribute
 Anybody Can Contribute
+
+# How to play
+Download the repo and simply open index.html file.
