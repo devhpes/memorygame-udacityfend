@@ -1,6 +1,9 @@
 # Memory Game Project
 Udacity FEND Memory Game Project
 
+![screenshot](https://user-images.githubusercontent.com/34937403/42815116-1842570a-89e4-11e8-921c-fe4a2e27b7e9.png)
+
+
 # Technologies Used
 HTML
 CSS
