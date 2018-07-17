@@ -122,6 +122,10 @@ h1 {
 	color: #FFD700;
 }
 
+.hide {
+    display: none;
+}
+
 /*
  * Styles for the Congratulation modal
  */

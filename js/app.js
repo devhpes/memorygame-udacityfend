@@ -154,6 +154,28 @@ function rating() {
    }
 }
 
+// Toggline the congratulation modal
+function modalToggle() {
+    congoModal.classList.toggle('hide');
+}
+modalToggle();
+
+//Congratulation Modal, after user sucessfully matched all the cards
+function isOverModal() {
+
+    if (matchedCards.length === cards.length) {
+        clearInterval(timerInterval);
+        endTimer = timerCounter.innerHTML;
+        modalToggle();
+
+        //Assigning stars, time and moves
+        document.getElementById('endTime').innerHTML = endTimer;   
+        document.getElementById('endMoves').innerHTML = moves + 1;
+        document.getElementById('endRatings').innerHTML = starsRating + ' Out Of 3';
+    }
+
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
