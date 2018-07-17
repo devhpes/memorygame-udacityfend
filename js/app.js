@@ -173,7 +173,7 @@ function isOverModal() {
         //Assigning stars, time and moves
         document.getElementById('endTime').innerHTML = endTimer;   
         document.getElementById('endMoves').innerHTML = moves + 1;
-        document.getElementById('endRatings').innerHTML = starsRating + ' Out Of 3';
+        document.getElementById('endRatings').innerHTML = starsRating + ' Out Of 3 Stars';
     }
 
 }
