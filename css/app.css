@@ -184,6 +184,28 @@ hr {
 }
 
 /*
+ * Media query for responsivness 
+*/
+
+@media screen and (max-width: 700px) {
+    .score-panel {
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .deck {
+            width: 100%;
+            padding: 2px;
+            min-height: 100vw;
+    }
+    
+    .deck .card {
+            width: 20vw;
+            height: 20vw;
+     }
+}
+
+/*
  * Keyframes for animation
 */
 
