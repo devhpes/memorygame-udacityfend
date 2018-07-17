@@ -57,6 +57,56 @@ function init() {
     }
 }
 
+//Calling the reset function,it reset everything when a new game is started - time, stars and moves
+
+// Adding Event listener to all cards and specifying matching conditions
+for (let i = 0; i < card.length; i++)
+
+    cards[i].addEventListener('click', function() {
+
+        {
+            console.log('Clicked');
+        }
+
+       openCard.push(this);
+        if (openCard.length === 2) {
+        // Comparing the cards and adding match and disable class
+            if (openCard[0].innerHTML  === openCard[1].innerHTML) {
+
+                openCard[0].classList.add('match', 'disable');
+                openCard[1].classList.add('match', 'disable');
+                //Removing the show and open class
+                openCard[0].classList.remove('show', 'open');
+                openCard[1].classList.remove('show', 'open');
+
+                //Pushing card to matched card variable
+                matchedCards.push(openCard[0], openCard[1]);
+
+                //reseting the openCard 
+                openCard = [];
+                
+            } else {
+                //
+                openCard[0].classList.add('show',"unmatched",'disable');
+                openCard[1].classList.add('show',"unmatched",'disable');
+                setTimeout(function() {
+                    openCard[0].classList.remove('open', 'show', 'disable','unmatched');
+                    openCard[1].classList.remove('open', 'show', 'disable','unmatched');
+                    openCard = [];
+
+                }, 600);
+
+            }
+            
+
+        } else {
+            openCard[0].classList.add('open', 'show', 'disable');
+            openCard[1].classList.add('open', 'show', 'disable');
+            openCard.push(this);
+        }
+
+    });
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
