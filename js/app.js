@@ -1,6 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
+
 //Declarations
 
 //array for open cards
@@ -58,21 +59,15 @@ function init() {
             deck.appendChild(element);
         });
         cards[i].classList.remove("show", "open", "match", "disable");
+        //Calling the reset function,it reset everything when a new game is started - time, stars and moves
         reset();
     }
 }
-
-//Calling the reset function,it reset everything when a new game is started - time, stars and moves
 
 // Adding Event listener to all cards and specifying matching conditions
 for (let i = 0; i < card.length; i++)
 
     cards[i].addEventListener('click', function() {
-
-        {
-            console.log('Clicked');
-        }
-
        openCard.push(this);
         if (openCard.length === 2) {
         // Comparing the cards and adding match and disable class
@@ -90,6 +85,7 @@ for (let i = 0; i < card.length; i++)
                 //reseting the openCard 
                 openCard = [];
 
+                //Calling congratulation modal function
                 isOverModal();
 
             } else {
@@ -169,7 +165,6 @@ modalToggle();
 
 //Congratulation Modal, after user sucessfully matched all the cards
 function isOverModal() {
-
     if (matchedCards.length === cards.length) {
         clearInterval(timerInterval);
         endTimer = timerCounter.innerHTML;
@@ -182,7 +177,6 @@ function isOverModal() {
     }
 
 }
-
 
 //Function for restarting the game
 function playAgain() {
@@ -200,8 +194,12 @@ function reset() {
     moves = 0;
     movesCounter.innerHTML = moves;
 
-    //Resetting stars
-    starsRating = 3;
+    //Reseting stars
+    stars[1].classList.add("fa-star");
+	stars[1].classList.remove("fa-star-o");
+	stars[2].classList.add("fa-star");
+	stars[2].classList.remove("fa-star-o");
+
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -219,6 +217,7 @@ function shuffle(array) {
     return array;
 }
 
+//eveytime the pages load init function will be called 
 init();
 /*
  * set up the event listener for a card. If a card is clicked:

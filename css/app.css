@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Concert One', cursive;
     font-weight: 300;
 }
 
@@ -100,7 +100,6 @@ h1 {
 
 .deck .card.disable {
     pointer-events: none;
-    opacity: 0.9;
 }
 
 /*
@@ -108,9 +107,11 @@ h1 {
  */
 
 .score-panel {
+    font-family: 'Concert One', cursive;
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .score-panel .stars {
@@ -132,7 +133,7 @@ h1 {
 
 .timer {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .fa-star {
