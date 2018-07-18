@@ -150,7 +150,9 @@ function startTimer() {
 
 //Rating function - Based on the moves, user will get rating specific rating or stars.
 function rating() {
+ HEAD
     'use strict'; // turn on Strict Mode
+ 476b0b8f5a8515a616b0176181b5fabae57d86fe
     if (moves > 10 && moves < 19) {
        stars[2].classList.remove('fa-star');
        stars[2].classList.add('fa-star-o');
