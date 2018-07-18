@@ -52,6 +52,7 @@ const congoModal = document.querySelector('.congomodal');
 
 //Game start function
 function init() {
+    'use strict'; // turn on Strict Mode
     cards = shuffle(cards);
     for(let i = 0; i < cards.length; i++){
         deck.innerHTML = '';
@@ -68,6 +69,7 @@ function init() {
 for (let i = 0; i < card.length; i++)
 
     cards[i].addEventListener('click', function() {
+        'use strict'; // turn on Strict Mode
        openCard.push(this);
         if (openCard.length === 2) {
         // Comparing the cards and adding match and disable class
@@ -113,6 +115,7 @@ for (let i = 0; i < card.length; i++)
 
 //Move function - for adding moves when user clicks on cards
 function addMoves() {
+    'use strict'; // turn on Strict Mode
     moves++;
     movesCounter.innerHTML = moves;
     rating();
@@ -128,6 +131,7 @@ function addMoves() {
 //Timer function
 let timerInterval; 
 function startTimer() {
+    'use strict'; // turn on Strict Mode
     timerInterval = setInterval(function() {
         //Inner HTML of timer
        timerCounter.innerHTML = minute + " Minute " + second + " Second";
@@ -146,6 +150,7 @@ function startTimer() {
 
 //Rating function - Based on the moves, user will get rating specific rating or stars.
 function rating() {
+    'use strict'; // turn on Strict Mode
     if (moves > 10 && moves < 19) {
        stars[2].classList.remove('fa-star');
        stars[2].classList.add('fa-star-o');
@@ -159,12 +164,14 @@ function rating() {
 
 // Toggline the congratulation modal
 function modalToggle() {
+    'use strict'; // turn on Strict Mode
     congoModal.classList.toggle('hide');
 }
 modalToggle();
 
 //Congratulation Modal, after user sucessfully matched all the cards
 function isOverModal() {
+    'use strict'; // turn on Strict Mode
     if (matchedCards.length === cards.length) {
         clearInterval(timerInterval);
         endTimer = timerCounter.innerHTML;
@@ -180,12 +187,14 @@ function isOverModal() {
 
 //Function for restarting the game
 function playAgain() {
+    'use strict'; // turn on Strict Mode
     modalToggle();
     init();
 }
 
 //Reset function - All time, moves and rating will be reset to the their default values
 function reset() {
+    'use strict'; // turn on Strict Mode
     //Resetting timer
     timerCounter.innerHTML = "0 Minute 0 Second";
     clearInterval(timerInterval);
@@ -204,6 +213,7 @@ function reset() {
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
+    'use strict'; // turn on Strict Mode
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
