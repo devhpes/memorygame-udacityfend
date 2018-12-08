@@ -174,7 +174,7 @@ function isOverModal() {
     'use strict'; // turn on Strict Mode
     if (matchedCards.length === cards.length) {
         clearInterval(timerInterval);
-        endTimer = timerCounter.innerHTML;
+        let endTimer = timerCounter.innerHTML;
         modalToggle();
 
         //Assigning stars, time and moves
